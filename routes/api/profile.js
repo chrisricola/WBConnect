@@ -66,6 +66,7 @@ async (req,res) => {
       if(company) profileFields.company = company;
       if(website) profileFields.website = website;
       if(location) profileFields.location = location;
+      if(status) profileFields.status = status;
       if(bio) profileFields.bio = bio;
       if(githubusername) profileFields.githubusername = githubusername;
       if(skills) {
@@ -96,7 +97,7 @@ async (req,res) => {
         //Create
         profile = new Profile(profileFields);
 
-        await Profile.save();
+        await profile.save();
         res.json(profile);
 
         } catch (err) {
