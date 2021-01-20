@@ -1,4 +1,6 @@
 {
     "mongoURI": "mongodb+srv://Chris:Chris123@wbconnect.gwteb.mongodb.net/test",
-    "jwtSecret": "mysecrettoken"
+    "jwtSecret": "mysecrettoken",
+    "githubClientId": "9a22b95f68e118722eb5",
+    "githubSecret": "9e10a1d2dd1e37ecd9bbc5da817238ec1e4c0cfb"
 }
