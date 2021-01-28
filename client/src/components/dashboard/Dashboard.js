@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import { getCurrentProfile, deleteAccount } from '../../actions/profile';
 import DashboardActions from './DashboardActions';
-
+import Experience from './Experience';
 
 const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: { profile, loading } }) => {
     useEffect(() => {
@@ -22,6 +22,7 @@ const Dashboard = ({ getCurrentProfile, deleteAccount, auth: { user }, profile: 
         {profile !== null ? (
             <Fragment>
                 <DashboardActions />
+                <Experience experience={ profile.experience } />
             </Fragment>
         ) : (
             <Fragment>
