@@ -18,7 +18,7 @@ const CreateProfile = ({ createProfile, history }) => {
     facebook: '',
     linkedin: '',
     youtube: '',
-    instagram: '',
+    instagram: ''
    });
 
    const [displaySocialInputs, toggleSocialInputs] = useState(false);
