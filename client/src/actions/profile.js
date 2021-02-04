@@ -16,17 +16,17 @@ export const getCurrentProfile = () => async dispatch => {
     try {
         const res = await axios.get('api/profile/me');
 
-        dispatch ({
+        dispatch({
             type: GET_PROFILE,
             payload: res.data
-        });
-    } catch (err) {
-        dispatch ({
+          });
+        } catch (err) {
+          dispatch({
             type: PROFILE_ERROR,
-            payload: { msg: err.response.statusTex, status: err.response.status }
-        });
-    }
-};
+            payload: { msg: err.response.statusText, status: err.response.status }
+          });
+        }
+      };
 
 // Get all profiles
 
