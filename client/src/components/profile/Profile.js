@@ -7,7 +7,8 @@ import { Link } from 'react-router-dom';
 import ProfileTop from './ProfileTop';
 import ProfileAbout from './ProfileAbout';
 import ProfileExperience from './ProfileExperience.js';
-import ProfileEducation from './ProfileEducation.js';
+import ProfileEducation from './ProfileEducation';
+import ProfileGithub from './ProfileGithub';
 
 const Profile = ({ getProfileById, profile: { profile, loading }, auth, match }) => {
     useEffect(() => {
@@ -46,6 +47,9 @@ const Profile = ({ getProfileById, profile: { profile, loading }, auth, match })
                       ))}
                     </Fragment>) : (<h4>No education credentials</h4>)}
                   </div>
+                  {profile.githubusername && (
+                    <ProfileGithub username={profile.githubusername} />
+                  )}
                 </ div>
                 </Fragment>}
         </Fragment>
